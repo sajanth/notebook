@@ -1,9 +1,10 @@
 ---
-title: "Why are neural networks able to generalize?"
+title: "[Notes] Why are neural networks able to generalize?"
 date: 2022-10-05T09:50:10+01:00
 draft: true
 math: true
 ShowReadingTime: true
+summary: "Notes on bias-variance tradeoff, the double-descent phenomenon, the idea of effective model complexity and implicit-regularization in gradient descent."
 cover:
     image: "media/cover.png" # image path/url
     alt: "There should be an image here..." # alt text
@@ -19,10 +20,10 @@ In recent years we have seen an explosion in the number of parameters in state o
 
 So how do we reconcile these two views?
 # Bias and Variance
-The goal of machine learning / statistical learning theory is to approximate an unknown distribution $M^*$ using a finite set of training data sampled from $M^*$. Different approaches usually differ in the choice of the function space $M_{\theta}$ one uses to search for a candidate model $M_{\theta^*}$ and how one defines the distance measure which determines what is considered a good fit.
+The goal of machine learning / statistical learning theory is to approximate an unknown distribution $M^\ast$ using a finite set of training data sampled from $M^\ast$. Different approaches usually differ in the choice of the function space $M_{\theta}$ one uses to search for a candidate model $M_{\theta^\ast}$ and how one defines the distance measure which determines what is considered a good fit.
 |![](media/2022-09-30-11-59-12.png)|
 |:--:| 
-| *Schematic illustration of a situation where the function space is not expressive enough to model the true distribution $M^*$. The closest approximation $M_{\theta^*}$ is found via optimization methods starting at some initial choice of model parameters $M_{\theta_0}$. [Source](https://mml-book.github.io/)* |
+| *Schematic illustration of a situation where the function space is not expressive enough to model the true distribution $M^\ast$. The closest approximation $M_{\theta^\ast}$ is found via optimization methods starting at some initial choice of model parameters $M_{\theta_0}$. [Source](https://mml-book.github.io/)* |
 
 The "textbook" understanding is that the complexity of the model used to approximate the true distribution needs to be "just right". If there are too few free parameters in the model, no matter how you tune the parameters, the predictive power of the model will be too limited i.e we are under-fitting. On the other end, if there are too many parameters, we are able to perfectly fit every sample in the training data at the cost of generalization as we are also fitting noise i.e. we are over-fitting. Note furthermore, that in the latter case there is not a unique solution and there are many possible ways to fit the training data perfectly. 
 The following figure illustrates these different scenarios using the space of n-degree polynomials as $M_{\theta}$ 
