@@ -1,4 +1,8 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = "Sajanth's notebook"
-theme = 'PaperModX'
+title = "Sajanth's Notebook"
+theme = 'PaperMod'
+
+[params]
+    assets.disableHLJS = true
+    ShowCodeCopyButtons = true
