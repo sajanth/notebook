@@ -1,3 +1,8 @@
 main {
-    --main-width: 720;
+    --main-width: 800px;
   }
+
+img[src*='#center'] { 
+    display: block;
+    margin: auto;
+}
