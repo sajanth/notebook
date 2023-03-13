@@ -7,7 +7,7 @@ ShowReadingTime: true
 summary: "Notes on bias-variance tradeoff, the double-descent phenomenon, the idea of effective model complexity and implicit-regularization in gradient descent."
 cover:
     image: "media/cover.png" # image path/url
-    hidden: true
+    hidden: false
 ShowToc: true
 TocOpen: true
 ---
