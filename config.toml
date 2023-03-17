@@ -6,3 +6,4 @@ theme = 'PaperMod'
 [params]
     assets.disableHLJS = true
     ShowCodeCopyButtons = true
+    defaultTheme = auto
