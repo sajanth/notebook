@@ -1,7 +1,7 @@
 ---
 title: "[Notes] Why are neural networks able to generalize?"
 date: 2022-10-05T09:50:10+01:00
-draft: true
+draft: false
 math: true
 ShowReadingTime: true
 summary: "Notes on bias-variance tradeoff, the double-descent phenomenon, the idea of effective model complexity and implicit-regularization in gradient descent."
